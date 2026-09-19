@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hygée</title>
+<meta name="description" content="Révise l'UE2 du M2 PSP (EHESP) façon Duolingo : 7 unités, 22 leçons, 176 questions.">
+<meta property="og:title" content="Hygée">
+<meta property="og:description" content="Révise l'UE2 du M2 PSP (EHESP) façon Duolingo : 7 unités, 22 leçons, 176 questions.">
+<meta name="theme-color" content="#1E7A5C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M8 6h16v3H8z' fill='%231E7A5C'/%3E%3Cpath d='M9 9h14v2c0 6-3 9-7 12-4-3-7-6-7-12V9z' fill='%231E7A5C' opacity='.85'/%3E%3Cpath d='M16 23v4M12 27h8' stroke='%231E7A5C' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<style>
+:root{
+  --bg:#F3F7F4;--surface:#FFFFFF;--surface-2:#E9EFEB;--ink:#14231C;--muted:#5E6E66;--line:#D7E0DA;--line-2:#C3CFC8;
+  --brand:#1E7A5C;--brand-dark:#155A44;--brand-soft:#DDF1E7;
+  --ok:#2E9E5B;--ok-dark:#237A46;--ok-soft:#E1F5E8;--ok-ink:#1B6B3B;
+  --bad:#D9483B;--bad-dark:#A93329;--bad-soft:#FBE4E1;--bad-ink:#9E2E22;
+  --gold:#E3A72F;--gold-dark:#B8841E;--gold-soft:#FBF1DC;
+  --sel:#1C8ED8;--sel-soft:#DDEFFB;
+  --u1:#1E7A5C;--u1d:#155A44;--u2:#2B5FA8;--u2d:#1F457B;--u3:#B8513A;--u3d:#8A3B2A;--u4:#6E48A6;--u4d:#50337B;--u5:#B77A14;--u5d:#87590E;--u6:#2F7386;--u6d:#215462;--u7:#4E7A2B;--u7d:#38591E;
+  --sans:"Nunito","Avenir Next","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1512;--surface:#171F1B;--surface-2:#202B26;--ink:#EEF3F0;--muted:#A3B3AA;--line:#2B3731;--line-2:#3A4841;
+    --brand:#3FA57E;--brand-dark:#2B7A5C;--brand-soft:#173B2E;
+    --ok:#3DBA6E;--ok-dark:#2B8A50;--ok-soft:#173B2A;--ok-ink:#8FE0B0;
+    --bad:#E8604F;--bad-dark:#B2403A;--bad-soft:#3F211B;--bad-ink:#F5A79B;
+    --gold:#E7B44A;--gold-dark:#B98C2C;--gold-soft:#3A2E13;
+    --sel:#4FA8E8;--sel-soft:#173246;
+    --u1:#3FA57E;--u1d:#2B7A5C;--u2:#6C9BE0;--u2d:#4A76B5;--u3:#E08468;--u3d:#B5624B;--u4:#A98BD8;--u4d:#8367B0;--u5:#E0A83A;--u5d:#B7862A;--u6:#5FAEC4;--u6d:#3F8598;--u7:#8DBA5A;--u7d:#6A9140;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1512;--surface:#171F1B;--surface-2:#202B26;--ink:#EEF3F0;--muted:#A3B3AA;--line:#2B3731;--line-2:#3A4841;
+  --brand:#3FA57E;--brand-dark:#2B7A5C;--brand-soft:#173B2E;
+  --ok:#3DBA6E;--ok-dark:#2B8A50;--ok-soft:#173B2A;--ok-ink:#8FE0B0;
+  --bad:#E8604F;--bad-dark:#B2403A;--bad-soft:#3F211B;--bad-ink:#F5A79B;
+  --gold:#E7B44A;--gold-dark:#B98C2C;--gold-soft:#3A2E13;
+  --sel:#4FA8E8;--sel-soft:#173246;
+  --u1:#3FA57E;--u1d:#2B7A5C;--u2:#6C9BE0;--u2d:#4A76B5;--u3:#E08468;--u3d:#B5624B;--u4:#A98BD8;--u4d:#8367B0;--u5:#E0A83A;--u5d:#B7862A;--u6:#5FAEC4;--u6d:#3F8598;--u7:#8DBA5A;--u7d:#6A9140;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
+button:disabled{cursor:default}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+#app{max-width:560px;margin:0 auto;min-height:100%;display:flex;flex-direction:column}
+.screen{display:flex;flex-direction:column;flex:1;min-height:100%}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
+
+/* 3D buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:15px;letter-spacing:.03em;text-transform:uppercase;padding:14px 20px;border-radius:14px;background:var(--brand);color:#fff;box-shadow:0 4px 0 var(--brand-dark);transition:transform .06s,box-shadow .06s;user-select:none;text-decoration:none}
+.btn:active:not(:disabled){transform:translateY(4px);box-shadow:0 0 0 var(--brand-dark)}
+.btn:disabled{background:var(--surface-2);color:var(--muted);box-shadow:0 4px 0 var(--line-2)}
+.btn.ok{background:var(--ok);box-shadow:0 4px 0 var(--ok-dark)}
+.btn.bad{background:var(--bad);box-shadow:0 4px 0 var(--bad-dark)}
+.btn.ghost{background:var(--surface);color:var(--brand);box-shadow:0 4px 0 var(--line-2);border:2px solid var(--line)}
+.btn.wide{width:100%}
+
+/* Home */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:8px;font-weight:900;font-size:20px;letter-spacing:-.01em}
+.logo svg{width:28px;height:28px}
+.stats{display:flex;gap:10px}
+.stat{display:flex;align-items:center;gap:5px;font-weight:900;font-size:15px;padding:5px 10px;border-radius:999px;background:var(--surface);border:1.5px solid var(--line)}
+.stat svg{width:18px;height:18px}
+.stat.fire{color:#E0632B}.stat.xp{color:var(--gold-dark)}
+.home{padding:16px 16px 110px;display:flex;flex-direction:column;gap:22px}
+.hero{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:16px}
+.hero h1{font-size:22px;font-weight:900;margin-bottom:4px}
+.hero p{margin:0 0 12px;color:var(--muted);font-size:14.5px}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}
+.hero .row .btn{flex:1;min-width:150px;font-size:13px;padding:12px 14px}
+.prog{height:10px;border-radius:999px;background:var(--surface-2);overflow:hidden;margin:8px 0 4px}
+.prog i{display:block;height:100%;background:var(--brand);border-radius:999px;transition:width .4s}
+.prog-l{font-size:12.5px;color:var(--muted);font-weight:700}
+.unit{border-radius:18px;overflow:hidden;border:1.5px solid var(--line);background:var(--surface)}
+.unit-h{padding:14px 16px;color:#fff;background:var(--c);display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.unit-h .n{font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+.unit-h h2{font-size:18px;font-weight:900;margin-top:2px}
+.unit-h .who{font-size:12.5px;opacity:.9;margin-top:2px;font-weight:700}
+.unit-h .crown{flex:none;display:flex;align-items:center;gap:4px;font-weight:900;font-size:14px;background:rgba(0,0,0,.18);padding:5px 10px;border-radius:999px}
+.unit-h .crown svg{width:16px;height:16px}
+.path{padding:18px 16px 8px;display:flex;flex-direction:column;gap:10px}
+.node{display:flex;align-items:center;gap:14px;text-align:left;padding:8px;border-radius:14px;width:100%}
+.node:hover{background:var(--surface-2)}
+.node .disc{flex:none;width:58px;height:58px;border-radius:50%;background:var(--surface-2);border:3px solid var(--line-2);box-shadow:0 5px 0 var(--line-2);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:var(--muted);transition:transform .06s,box-shadow .06s}
+.node:active .disc{transform:translateY(5px);box-shadow:0 0 0 var(--line-2)}
+.node.done .disc{background:var(--c);border-color:var(--c);box-shadow:0 5px 0 var(--cd);color:#fff}
+.node.gold .disc{background:var(--gold);border-color:var(--gold);box-shadow:0 5px 0 var(--gold-dark);color:#fff}
+.node.next .disc{background:var(--surface);border-color:var(--c);box-shadow:0 5px 0 var(--cd);color:var(--c)}
+.node .disc svg{width:26px;height:26px}
+.node .t{font-weight:900;font-size:15.5px}
+.node .s{font-size:12.5px;color:var(--muted);font-weight:700;margin-top:1px}
+.node.next .t{color:var(--c)}
+.node:nth-child(odd){padding-left:8px}
+.node:nth-child(even){padding-left:44px}
+.node:nth-child(3n){padding-left:80px}
+.foot-note{font-size:12.5px;color:var(--muted);text-align:center;font-weight:700;padding:0 8px}
+.foot-note a{color:var(--brand)}
+
+/* Lesson */
+.lesson{padding:0 16px calc(120px + env(safe-area-inset-bottom,0px));flex:1}
+.lbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);display:flex;align-items:center;gap:12px;padding:12px 0 10px}
+.lbar .x{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:22px;font-weight:900;flex:none}
+.lbar .x:hover{background:var(--surface-2)}
+.lbar .pb{flex:1;height:14px;border-radius:999px;background:var(--surface-2);overflow:hidden}
+.lbar .pb i{display:block;height:100%;background:var(--ok);border-radius:999px;transition:width .35s;position:relative}
+.lbar .pb i::after{content:"";position:absolute;left:8px;right:8px;top:3px;height:4px;border-radius:999px;background:rgba(255,255,255,.35)}
+.lbar .cnt{font-weight:900;color:var(--muted);font-size:13px;flex:none;min-width:38px;text-align:right;font-variant-numeric:tabular-nums}
+.kind{font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--c,var(--brand));margin:10px 0 6px}
+.qtext{font-size:20px;font-weight:900;line-height:1.3;margin-bottom:18px}
+.qtext .gap{display:inline-block;min-width:110px;border-bottom:3px solid var(--line-2);padding:0 6px;text-align:center;color:var(--sel);vertical-align:bottom;line-height:1.2}
+.qtext .gap.filled{border-color:var(--sel)}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;padding:13px 14px;border-radius:14px;border:2px solid var(--line);background:var(--surface);box-shadow:0 3px 0 var(--line);font-weight:700;font-size:15.5px;line-height:1.3;transition:transform .06s,box-shadow .06s}
+.opt:active:not(:disabled){transform:translateY(3px);box-shadow:0 0 0 var(--line)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--muted)}
+.opt.sel{border-color:var(--sel);background:var(--sel-soft);box-shadow:0 3px 0 var(--sel);color:var(--sel)}
+.opt.sel .k{border-color:var(--sel);color:var(--sel)}
+.opt.right{border-color:var(--ok);background:var(--ok-soft);box-shadow:0 3px 0 var(--ok);color:var(--ok-ink)}
+.opt.right .k{border-color:var(--ok);color:var(--ok-ink)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft);box-shadow:0 3px 0 var(--bad);color:var(--bad-ink)}
+.opt.wrong .k{border-color:var(--bad);color:var(--bad-ink)}
+.opt:disabled{opacity:.92}
+.vf{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vf .opt{justify-content:center;font-size:17px;padding:20px 10px;font-weight:900}
+.bank{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chipb{padding:10px 14px;border-radius:12px;border:2px solid var(--line);background:var(--surface);box-shadow:0 3px 0 var(--line);font-weight:800;font-size:15px;transition:transform .06s,box-shadow .06s}
+.chipb:active:not(:disabled){transform:translateY(3px);box-shadow:0 0 0 var(--line)}
+.chipb.used{opacity:.35}
+.chipb.right{border-color:var(--ok);background:var(--ok-soft);color:var(--ok-ink);box-shadow:0 3px 0 var(--ok)}
+.chipb.wrong{border-color:var(--bad);background:var(--bad-soft);color:var(--bad-ink);box-shadow:0 3px 0 var(--bad)}
+.assoc{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.assoc .opt{min-height:64px;justify-content:center;text-align:center;font-size:14px;padding:10px}
+.assoc .opt.gone{opacity:.28;border-style:dashed;box-shadow:none;transform:none}
+.assoc .opt.shake{animation:shake .35s}
+@keyframes shake{20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.slots{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.slot{display:flex;align-items:center;gap:10px;min-height:48px;padding:6px 10px;border-radius:12px;border:2px dashed var(--line-2);background:var(--surface-2);font-weight:800;text-align:left;font-size:15px}
+.slot .i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--surface);border:2px solid var(--line-2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:var(--muted)}
+.slot.full{border-style:solid;border-color:var(--sel);background:var(--sel-soft)}
+.slot.right{border-color:var(--ok);background:var(--ok-soft);color:var(--ok-ink)}
+.slot.wrong{border-color:var(--bad);background:var(--bad-soft);color:var(--bad-ink)}
+.explain{margin-top:16px;font-size:14.5px;color:var(--muted);font-weight:700}
+
+/* Footer feedback */
+.fb{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:2px solid var(--line);padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px))}
+.fb-in{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.fb.good{background:var(--ok-soft);border-color:var(--ok-soft)}
+.fb.badf{background:var(--bad-soft);border-color:var(--bad-soft)}
+.fb .msg{display:flex;gap:12px;align-items:flex-start}
+.fb .ic{flex:none;width:44px;height:44px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center}
+.fb .ic svg{width:26px;height:26px}
+.fb.good .msg{color:var(--ok-ink)}.fb.badf .msg{color:var(--bad-ink)}
+.fb .msg b{display:block;font-size:19px;font-weight:900;margin-bottom:2px}
+.fb .msg span{font-size:14.5px;font-weight:700;line-height:1.35}
+.fb .msg .ans{font-weight:900}
+
+/* Result */
+.result{padding:40px 20px calc(30px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;flex:1;justify-content:center}
+.result h1{font-size:28px;font-weight:900}
+.result p{margin:0;color:var(--muted);font-weight:700}
+.medal{width:120px;height:120px;border-radius:50%;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;border:4px solid var(--gold)}
+.medal svg{width:64px;height:64px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:400px}
+.tile{border-radius:14px;border:2px solid var(--c);overflow:hidden;background:var(--surface)}
+.tile .l{background:var(--c);color:#fff;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:5px}
+.tile .v{font-size:24px;font-weight:900;padding:10px 4px;color:var(--c);font-variant-numeric:tabular-nums}
+.result .acts{display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px;margin-top:8px}
+.review-list{width:100%;max-width:400px;text-align:left;font-size:14px;color:var(--muted);font-weight:700}
+.review-list li{margin:4px 0}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center;z-index:50;padding:16px}
+.modal .box{background:var(--surface);border-radius:18px;padding:20px 18px calc(18px + env(safe-area-inset-bottom,0px));width:100%;max-width:520px;display:flex;flex-direction:column;gap:12px}
+.modal h3{font-size:18px;font-weight:900}
+.modal p{margin:0;color:var(--muted);font-weight:700;font-size:14.5px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (min-width:600px){.home{padding-top:22px}.hero h1{font-size:24px}}
+</style>
+<div id="app" aria-live="polite"></div>
+<script>
+/* ---------- Données de cours ---------- */
+const FICHES_URL="./fiches.html";
+const UNITS=[
+{id:"u1",n:1,c:"--u1",title:"Psychosociologie de la prévention",who:"Jocelyn Raude · notes manuscrites",lessons:[
+{id:"u1l1",title:"La prévention : définitions",q:[
+{t:"qcm",q:"Selon l'OMS (1948), la prévention est « l'ensemble des mesures visant à… »",o:["éviter ou réduire le nombre et la gravité des maladies, des accidents et des handicaps","soigner les maladies au moindre coût pour la collectivité","informer les citoyens sur les risques liés à leurs comportements","financer la recherche sur les causes des maladies"],a:0,e:"Définition de référence, à citer avec la date : OMS, 1948."},
+{t:"trou",q:"La prévention représente environ ___ des dépenses de santé.",o:["5 %","15 %","25 %","40 %"],a:0,e:"Elle est devenue secondaire dans les années 1970 et ne pèse qu'environ 5 % des dépenses."},
+{t:"vf",q:"La prévention est une idée récente, née au XXe siècle avec la médecine moderne.",a:false,e:"Elle a toujours existé, dès les premières traces écrites."},
+{t:"assoc",q:"Associe chaque figure de la mythologie grecque à son domaine.",p:[["Apollon","dieu de la santé et de la vitalité"],["Asclépios","dieu de la médecine"],["Panacée","déesse des pharmaciens"],["Hygée","l'hygiène"]],e:"Hygée, fille d'Asclépios, donne son nom au « ministère de l'hygiène publique » : c'est la figure de la PSP."},
+{t:"qcm",q:"Dans la cartographie des sciences de la santé, quelles échelles relèvent de la santé publique ?",o:["Individu, organisme, écosystème, population","Gènes, organes, corps","Uniquement la population (épidémiologie)","Uniquement l'écosystème (santé environnementale)"],a:0,e:"Les gènes, organes et corps relèvent de la médecine ; la santé publique va de l'individu à la population."},
+{t:"qcm",q:"Pourquoi Raude cite-t-il l'ulcère de l'estomac ?",o:["Le stress est un effet et non la cause : la cause est une infection bactérienne","Pour montrer que le stress est la première cause de maladie","Pour illustrer une maladie sans cause connue","Pour montrer l'inutilité de l'épidémiologie"],a:0,e:"L'épidémiologie, science de l'origine des maladies, a montré que la paroi de l'estomac était infectée par une bactérie."},
+{t:"qcm",q:"Que désignent les « sciences des solutions » ?",o:["La PSP, qui teste des solutions (ex. : vaccination en pharmacie)","L'épidémiologie, qui documente les causes","La génétique médicale","La médecine générale"],a:0,e:"Raude oppose les sciences du problème (documenter les causes) aux sciences des solutions (tester et trouver des solutions)."},
+{t:"vf",q:"Selon Raude, en France ce sont surtout les associations, acteurs privés, qui portent les messages de prévention.",a:true,e:"C'est l'un des éléments du « grand malentendu français » entre administration, associations, promotion de la santé et prévention."}]},
+{id:"u1l2",title:"Modèles d'explication de la maladie",q:[
+{t:"qcm",q:"Une approche ontologique de la maladie explique celle-ci par…",o:["une contamination de l'organisme (miasmes, virus, bactéries, polluants)","un déséquilibre interne des humeurs","le hasard et la nécessité","une intention maléfique surnaturelle"],a:0,e:"Ontologique = un agent extérieur entre dans l'organisme. Réponse historique : faire circuler l'air."},
+{t:"qcm",q:"La saignée relève de quelle approche ?",o:["Holistique (rétablir l'équilibre interne)","Ontologique","Stochastique","Déterministe"],a:0,e:"Comme la théorie des humeurs ou la médecine chinoise traditionnelle : on rééquilibre l'organisme."},
+{t:"assoc",q:"Associe chaque approche à son principe.",p:[["Ontologique","contamination par un agent extérieur"],["Holistique","équilibre ou déséquilibre interne"],["Stochastique","hasard et nécessité"],["Déterministe","intention maléfique humaine ou surnaturelle"]],e:"Les deux premières expliquent la maladie, les deux dernières expliquent pourquoi on tombe malade."},
+{t:"vf",q:"Les approches déterministes (offense des ancêtres, sorcellerie) dominent dans les sociétés dites « modernes ».",a:false,e:"Elles dominent dans les sociétés « traditionnelles » ; les sociétés modernes privilégient l'approche stochastique, historiquement très minoritaire."},
+{t:"trou",q:"En France, on est passé à l'___ plus vite qu'aux États-Unis.",o:["homéopathie","vaccination","psychanalyse","chirurgie"],a:0,e:"Exemple donné pour l'approche holistique, mieux acceptée en France."},
+{t:"qcm",q:"Quels sont les trois buts de la science de la prévention (SPR) ?",o:["Identifier les facteurs de risque modifiables, renforcer les facteurs de protection, identifier les moyens de diffusion","Soigner, dépister, rééduquer","Interdire, limiter, informer","Vacciner, dépister, éduquer"],a:0,e:"Les facteurs de protection se situent à quatre niveaux : individu, famille, pairs, communauté."},
+{t:"qcm",q:"Lequel n'est PAS un facteur de risque modifiable ?",o:["L'âge","Le tabac","L'alimentation","L'activité physique"],a:0,e:"Les non modifiables : âge, sexe, génétique."},
+{t:"vf",q:"Prier pour se libérer du mal est un exemple d'usage social du malheur.",a:true,e:"Le malheur a un usage social lié à la religion."}]},
+{id:"u1l3",title:"Idéologie, contrainte et nudge",q:[
+{t:"qcm",q:"Quelles sont les deux dimensions idéologiques de la PSP selon Raude ?",o:["La responsabilité individuelle des états de santé et l'acceptabilité de l'intervention publique dans la sphère privée","Le coût et l'efficacité","La science et la religion","L'individualisme et le collectivisme"],a:0,e:"Choix personnels ou facteurs externes ? Et jusqu'où l'État peut-il entrer dans l'intime (hygiène, sexualité) ?"},
+{t:"qcm",q:"Que défend la vision de Gary Becker (1976) ?",o:["Une vision libertarienne : nous choisissons notre durée de vie","Une vision puritaine : il faut souffrir pour être en bonne santé","Une vision hygiéniste : l'État doit contraindre","Une vision communautaire de la santé"],a:0,e:"Le « moteur libertarien » de Becker s'oppose à la vision puritaine, aussi évoquée en cours."},
+{t:"ordre",q:"Range ces instruments de la contrainte la plus forte à la liberté la plus grande.",items:["Interdire","Limiter","Inciter négativement","Inciter positivement","Créer une architecture de choix","Informer"],e:"L'échelle va d'interdire à ne rien faire ; l'architecture de choix et l'information sont du côté de la liberté."},
+{t:"qcm",q:"L'« effet Streisand » illustre…",o:["la réactance : interdire ou censurer rend le produit plus attractif","l'efficacité des campagnes de peur","le succès des interdictions bien expliquées","l'effet des primes financières"],a:0,e:"Sensibilité à la privation et attractivité par l'interdiction sont des effets pervers de la contrainte."},
+{t:"qcm",q:"Lequel est un nudge matériel ?",o:["Réduire la taille des assiettes et des verres","Interdire la publicité pour l'alcool","Taxer les sodas","Rembourser les substituts nicotiniques"],a:0,e:"Autre exemple du cours : un gros porte-clés pour ne plus perdre ses clés."},
+{t:"vf",q:"L'architecture du choix joue sur les propriétés et l'emplacement des options.",a:true,e:"D'où l'idée d'un monde en partie « toxique » qui facilite la prise de poids."},
+{t:"qcm",q:"Quelle recommandation vise le système impulsif pour manger moins ?",o:["Faire ses courses le ventre plein","Compter ses calories chaque soir","Lire les étiquettes nutritionnelles","Consulter un diététicien"],a:0,e:"Avec : boire l'eau de sa gourde et faire une liste de courses."},
+{t:"qcm",q:"L'expérience sociale randomisée citée par Raude (obésité, diabète) valide…",o:["les politiques de mixité sociale","les campagnes d'information","les interdictions de publicité","la responsabilité individuelle"],a:0,e:"Le contexte social influence les comportements : on agit sur les individus et sur leurs effets."}]},
+{id:"u1l4",title:"Histoire et données",q:[
+{t:"assoc",q:"Associe chaque pionnier à son apport.",p:[["Semmelweis","le lavage des mains"],["Nightingale","hôpitaux de campagne et écoles d'infirmières"],["Snow","les cas de choléra autour d'une pompe"],["G. Rose","des comportements socialement distribués"]],e:"Nightingale a aussi créé les statistiques médicales et découvert l'hygiène militaire (typhus)."},
+{t:"qcm",q:"John Snow est considéré comme le fondateur de…",o:["l'épidémiologie géographique","la microbiologie","l'éducation thérapeutique","la médecine du travail"],a:0,e:"Il a recensé les cas de choléra et trouvé leur point commun : une pompe alimentée par une source infectée."},
+{t:"qcm",q:"Quelles sont les deux premières mesures lors d'une catastrophe ?",o:["Filtration de l'eau (chlore, charbon) et latrines","Vaccination et antibiotiques","Hôpitaux de campagne et tri","Information et masques"],a:0,e:"L'hygiénisme a été le facteur radical de la transition épidémiologique."},
+{t:"vf",q:"Entre 1900 et 1997, l'espérance de vie en Europe et aux États-Unis a doublé.",a:true,e:"Baisse de la mortalité à la naissance, des maladies infectieuses, des cancers, disparition de la tuberculose, moins d'intoxications alimentaires."},
+{t:"trou",q:"La France est en ___ position mondiale pour l'espérance de vie à la naissance.",o:["4e","1re","10e","20e"],a:0,e:"Environ 80 ans en moyenne ; le Japon et la Corée font mieux. Pour l'espérance de vie à 65 ans, la France était 1re en Europe."},
+{t:"qcm",q:"Quel est l'écart d'espérance de vie entre femmes et hommes en France ?",o:["7 ans","2 ans","12 ans","4 ans"],a:0,e:"Les femmes font toujours mieux en santé publique, sauf pour la vaccination."},
+{t:"qcm",q:"Cadres et ouvriers : quel écart d'espérance de vie ?",o:["6 ans, et l'éducation pèse plus que l'emploi","1 an","15 ans","Aucun écart significatif"],a:0,e:"Autre inégalité : 5 ans entre le nord-est et le sud-ouest, liés à la cuisine."},
+{t:"qcm",q:"Quels sont les deux « problèmes » de la France selon Raude ?",o:["Une mortalité prématurée élevée et des inégalités de santé marquées","Une espérance de vie faible et un système coûteux","Un manque de médecins et d'hôpitaux","Une population vieillissante et l'obésité"],a:0,e:"Mortalité des 0-15 ans qui remonte, manque de prévention primaire ; inégalités de sexe, de classe et de territoire."}]},
+{id:"u1l5",title:"Étiologie et facteurs de risque",q:[
+{t:"qcm",q:"« Fumer provoque le cancer du poumon » est une cause…",o:["proximale : directe et immédiate, un facteur de risque","distale : latente, un déterminant","commerciale","primordiale"],a:0,e:"Le facteur de risque est la version négative ; le déterminant de la santé la version positive."},
+{t:"qcm",q:"« Un environnement qui valorise la consommation de tabac » est…",o:["une cause distale, un déterminant de la santé (commercial)","une cause proximale","un facteur de risque individuel","une prévention tertiaire"],a:0,e:"Les causes distales sont moins directes ; elles renvoient aux déterminants, dont les déterminants commerciaux."},
+{t:"ordre",q:"Classe les explications de la mortalité prématurée (Amérique du Nord) de la plus forte à la plus faible.",items:["Comportements et modes de vie (40 %)","Biogénétique (30 %)","Environnement (15 %)","Accès aux services de santé (10 %)"],e:"Une autre estimation notée en cours donne 36 %, 22 %, 7 % et 11 %."},
+{t:"qcm",q:"Quelle enquête sert à calculer ces parts ?",o:["NutriNet","Le Baromètre SPF","i-Share","EPIC-Norfolk"],a:0,e:"Grande cohorte française sur l'alimentation et la santé."},
+{t:"qcm",q:"Que retient-on de Geoffrey Rose (1992) dans ce cours ?",o:["Les patients s'ennuient à l'hôpital, mobilisons ce temps pour la prévention ; mais ils reprennent leurs habitudes : les comportements sont socialement distribués","La prévention doit être coercitive","Les gènes expliquent l'essentiel de la mortalité","Les campagnes de masse sont inutiles"],a:0,e:"Premier pas vers l'ETP ; et l'exemple de l'opéra comme rite social et culturel."},
+{t:"assoc",q:"Associe chaque niveau de prévention à un exemple.",p:[["Primaire","vaccination"],["Secondaire","mammographie"],["Tertiaire","rééducation"],["Primordiale","traitement de l'eau"]],e:"La prévention secondaire est institutionnalisée par les professionnels de santé."},
+{t:"qcm",q:"Sur quoi repose la prévention active ?",o:["Le savoir et le savoir-faire, un système réflexif (éducation à la santé)","Le système automatique et l'architecture du choix","Les taxes et subventions","Les normes sociales"],a:0,e:"La prévention passive agit sur l'environnement physique, social et économique sans effort de la personne."},
+{t:"vf",q:"« Janvier sec » a été retiré parce que la campagne était un échec.",a:false,e:"Retirée pour des raisons économiques alors qu'elle était un grand succès : une controverse de la prévention."}]}
+]},
+{id:"u2",n:2,c:"--u2",title:"Stratégies communautaires",who:"Eric Breton · séquence 4",lessons:[
+{id:"u2l1",title:"Repères et définitions",q:[
+{t:"ordre",q:"Range ces jalons dans l'ordre chronologique.",items:["Déclaration d'Alma-Ata","Charte d'Ottawa","Objectifs de développement durable","Déclaration d'Astana"],e:"1978, 1986, 2015, 2018."},
+{t:"qcm",q:"Que visait la déclaration d'Alma-Ata (1978) ?",o:["Un consensus de l'OMS sur ce qu'un système de santé doit faire à l'échelon local (soins de santé primaires)","La création des ARS","La définition de la prévention","L'interdiction du tabac dans les lieux publics"],a:0,e:"Rappeler aux États membres leurs devoirs envers leurs communautés : faire plus que soigner."},
+{t:"vf",q:"Il existe une définition consensuelle de la santé communautaire.",a:false,e:"Elle conjugue deux concepts difficiles à définir : la santé et la communauté."},
+{t:"qcm",q:"D'après Hyppolite, Parent & Bourque (2020), l'action communautaire désigne…",o:["toute initiative de personnes, d'organismes ou de communautés visant une solution collective et solidaire à un problème commun","les campagnes nationales de prévention","les soins délivrés par la médecine libérale","les décisions des agences régionales de santé"],a:0,e:"Elle contribue à exercer un plus grand contrôle sur les déterminants et à réduire les inégalités sociales de santé."},
+{t:"assoc",q:"Associe chaque type de communauté à son exemple.",p:[["Géographique","un quartier"],["D'intérêt","les locataires"],["D'identité","les utilisateurs de drogues"],["Communauté saine","améliore continuellement son environnement"]],e:"Géographique : territoire vécu ; d'intérêt : problèmes sociaux communs ; d'identité : identité acquise ou souhaitée."},
+{t:"qcm",q:"« Les jeunes femmes » (ex. : #MeToo) forment une communauté…",o:["d'identité et d'affinités","géographique","d'intérêt","professionnelle"],a:0,e:"Comme les minorités culturelles ou les personnes homosexuelles."},
+{t:"vf",q:"Selon Breton, l'approche biomédicale est plus présente dans Astana (2018) que dans Alma-Ata (1978).",a:true,e:"Astana est la « seconde version » d'Alma-Ata."},
+{t:"trou",q:"La santé et la maladie peuvent se côtoyer : l'exemple du cours est un ___ qui a un cancer.",o:["marathonien","nourrisson","retraité","médecin"],a:0,e:"La santé est un spectre, de plus de santé à moins de santé."}]},
+{id:"u2l2",title:"Les 8 repères et la prévention OMS",q:[
+{t:"qcm",q:"Que signifie SEPSAC ?",o:["Secrétariat européen des pratiques de santé communautaire","Société européenne de prévention et de santé communautaire","Service public de santé et d'action communautaire","Syndicat européen des professionnels de santé"],a:0,e:"Ses repères sont repris par Jourdan, O'Neill, Dupéré & Stirling (2012)."},
+{t:"qcm",q:"Comment se répartissent les 8 repères du SEPSAC ?",o:["3 relatifs à la promotion de la santé, 4 spécifiques à la stratégie communautaire, 1 méthodologique","4 politiques et 4 pratiques","8 étapes chronologiques","2 par axe de la Charte d'Ottawa"],a:0,e:"À citer tel quel dans une copie."},
+{t:"qcm",q:"Quel est le repère méthodologique ?",o:["Une planification par une évaluation partagée, évolutive et permanente","Une évaluation externe en fin de projet","Un essai contrôlé randomisé","Un audit annuel de l'ARS"],a:0,e:"Repère n° 8."},
+{t:"qcm",q:"Lequel est un repère spécifique à la stratégie communautaire ?",o:["Favoriser un contexte de partage de pouvoir et de savoir","Agir sur les déterminants de la santé","Avoir une approche globale et positive de la santé","Travailler en intersectorialité"],a:0,e:"Les trois autres relèvent de la promotion de la santé en général."},
+{t:"vf",q:"Selon l'OMS Europe (2012), le champ de la prévention est limité aux actions à destination des individus.",a:true,e:"C'est ce qui la distingue de l'approche communautaire."},
+{t:"assoc",q:"Associe chaque niveau à un exemple de l'OMS Europe (2012).",p:[["Primaire","marketing social"],["Secondaire","dépistage"],["Tertiaire","groupes de soutien aux patients"],["Protection de la santé","sécurité sanitaire des aliments"]],e:"La protection de la santé recouvre évaluation, gestion et communication des risques."},
+{t:"qcm",q:"Dans quelle revue paraît « Quarante ans après, où en est la santé communautaire ? » (2012) ?",o:["Santé Publique","The Lancet","Implementation Science","Journal of Social Marketing"],a:0,e:"Jourdan D., O'Neill M., Dupéré S. & Stirling J., Santé Publique, 24(2), 165-178."},
+{t:"qcm",q:"L'intervenant en santé communautaire est défini par analogie avec…",o:["le pédagogue selon Philippe Meirieu : viser l'émancipation et la participation pleine et entière","le médecin de famille","le manager de projet","le chercheur en épidémiologie"],a:0,e:"Former progressivement la capacité des personnes à prendre en charge leur propre santé, individuellement et collectivement."}]},
+{id:"u2l3",title:"Légitimité, visées, leviers",q:[
+{t:"qcm",q:"Quels sont les deux constats qui fondent la légitimité de la santé communautaire (Fadul, 2019) ?",o:["Une main-d'œuvre limitée et une communauté qui est un système complexe","Le coût des hôpitaux et le vieillissement","L'échec de la prévention et la montée des maladies chroniques","La décentralisation et les ARS"],a:0,e:"La complexité remet en question la capacité des acteurs régionaux et nationaux à intervenir efficacement."},
+{t:"qcm",q:"Quelles sont les deux visées de la santé communautaire ?",o:["L'équité et la résilience des populations","L'efficience et la sécurité","La prévention et le soin","L'information et la vaccination"],a:0,e:"Résilience collective : s'adapter, rebondir, maintenir ses fonctions face à un événement."},
+{t:"qcm",q:"Quels sont les trois leviers ?",o:["Collaboration intersectorielle, implication de la communauté, travailleurs communautaires","Financement, évaluation, communication","Médecins, infirmiers, pharmaciens","Loi, décret, contrat"],a:0,e:"Les travailleurs communautaires sont décrits à travers la médiation en santé."},
+{t:"vf",q:"La résilience, ici collective, est la capacité à s'adapter, rebondir et maintenir ses fonctions face à un événement.",a:true,e:"Par exemple face à un événement climatique."},
+{t:"assoc",q:"Associe chaque opération essentielle de santé publique (EPHO) à son contenu.",p:[["EPHO A","résilience des communautés"],["EPHO B","promotion de la santé"],["EPHO C","déterminants sociaux"],["EPHO D","action intersectorielle"]],e:"Quatre opérations de l'OMS Europe qui concernent directement la santé communautaire."},
+{t:"qcm",q:"Quelles sont les deux conceptions de la communauté selon l'objectif visé ?",o:["Les groupes vulnérables et marginalisés ; ce qui est commun et le sentiment d'appartenance","La ville et la campagne","Les patients et les soignants","Les jeunes et les âgés"],a:0,e:"On met l'accent sur l'une ou l'autre selon l'objectif à atteindre."},
+{t:"trou",q:"La médiation en santé : des pratiques d'___ pour aider le patient à accéder au soin.",o:["interprétation","interdiction","évaluation","prescription"],a:0,e:"C'est ainsi que Breton décrit le travailleur communautaire."},
+{t:"qcm",q:"Que désigne le « lifestyle drift » évoqué par Breton ?",o:["Revenir aux comportements et facteurs de risque au lieu de partir des besoins de santé","Le changement de mode de vie des étudiants","La mobilité des professionnels de santé","L'évolution des habitudes alimentaires"],a:0,e:"Le CCNDS parle de « dérive du mode de vie » (fiche 7)."}]},
+{id:"u2l4",title:"Le cadre français",q:[
+{t:"qcm",q:"Quand un cadre institutionnel émerge-t-il pour la santé communautaire en France ?",o:["Avec la loi HPST (2009) et les contrats locaux de santé ; elle est absente de la loi de 2004","Avec la loi de santé publique de 2004","Avec le Ségur de la santé (2020)","Avec la décentralisation de 1983"],a:0,e:"Citation de Jourdan et al. (2012), p. 174."},
+{t:"vf",q:"Les contrats locaux de santé disposent d'un financement solide.",a:false,e:"Pas de financement propre, hors la coordinatrice, et une évaluation rudimentaire."},
+{t:"qcm",q:"Que recommande le Ségur de la santé (2020) ?",o:["Un schéma départemental de santé qui remplacerait les plans superposés : PTS, CLS…","De créer de nouveaux CLS","De supprimer les ARS","De transférer la santé aux régions"],a:0,e:"« Quand le naturel revient vite au galop » : retour du centralisme."},
+{t:"qcm",q:"Pourquoi est-il difficile d'articuler sanitaire et social au niveau local ?",o:["Le social a été dévolu aux départements (1983, 2004) alors que la santé reste à l'État central","Les communes refusent d'agir","Les hôpitaux concentrent les compétences","Les associations sont absentes"],a:0,e:"La santé communautaire a donc vécu par des initiatives locales, dans la politique de la ville et en milieu défavorisé."},
+{t:"assoc",q:"Associe chaque acteur à son rôle.",p:[["SFSP","famille professionnelle nationale"],["EUPHA","conférence européenne annuelle"],["UIPES / IUHPE","niveau international"],["Institut Renaudot","rôle pivot du secteur associatif"]],e:"Breton préside la section Promotion de la santé de l'EUPHA."},
+{t:"qcm",q:"Quel organisme a succédé au CFES ?",o:["L'INPES","La HAS","L'ANSES","Santé publique France dès 1990"],a:0,e:"Comité français d'éducation pour la santé, puis Institut national de prévention et d'éducation pour la santé."},
+{t:"vf",q:"Les ARS sont déconcentrées : elles attendent les directives du ministère.",a:true,e:"Déconcentration et non décentralisation."},
+{t:"qcm",q:"Selon Breton, où se trouve le pouvoir dans le système de santé ?",o:["Dans le soin, car c'est là que l'argent est versé","Dans la prévention","Dans les associations","Dans les collectivités locales"],a:0,e:"Autre remarque : les subventions agricoles nourrissent l'agro-business."}]}
+]},
+{id:"u3",n:3,c:"--u3",title:"Marketing social",who:"Diane Geindreau · modules 1 à 3",lessons:[
+{id:"u3l1",title:"Comportements et modèles",q:[
+{t:"qcm",q:"Quel est le premier déterminant de la mortalité prématurée ?",o:["Les comportements","La génétique","L'accès aux soins","La pollution"],a:0,e:"Un risque de santé publique sur lequel on peut agir (Khaw 2008, Kvaavik 2010)."},
+{t:"vf",q:"Les comportements à risque s'additionnent simplement.",a:false,e:"Ils s'articulent : substitution ou complémentarité. Alcool et tabac se retrouvent ensemble."},
+{t:"assoc",q:"Théorie du comportement planifié : associe chaque déterminant à sa définition.",p:[["Croyances","comment je me positionne"],["Normes subjectives","influence de l'entourage"],["Contrôle perçu","ce que je crois pouvoir faire"],["Intention","précède le comportement"]],e:"Ajzen & Fishbein : croyances, attitudes, normes subjectives et contrôle perçu forment l'intention."},
+{t:"ordre",q:"Remets les stades du modèle transthéorique dans l'ordre.",items:["Précontemplation","Contemplation","Décision / préparation","Action","Maintien"],e:"Prochaska & DiClemente ; sans oublier la rechute."},
+{t:"qcm",q:"Que signifie COM-B ?",o:["Capacité, Opportunité, Motivation produisent le comportement","Communication, Objectif, Mesure","Coût, Offre, Marque","Croyance, Opinion, Motivation"],a:0,e:"Michie, van Stralen & West ; la motivation est réflexive ou automatique."},
+{t:"qcm",q:"La roue du changement de comportement (Michie et al., 2011) propose…",o:["9 fonctions d'intervention, ex. : incitation financière = hausse des taxes sur le tabac","5 axes de promotion de la santé","3 niveaux de prévention","8 repères communautaires"],a:0,e:"Les catégories de politiques publiques (législation…) permettent l'adoption des interventions."},
+{t:"trou",q:"La théorie du comportement planifié est due à Ajzen & ___.",o:["Fishbein","Prochaska","Michie","Kotler"],a:0,e:"Elle sert à étayer l'action publique sur une base théorique."},
+{t:"qcm",q:"Dans COM-B, l'opportunité est…",o:["physique ou sociale","réflexive ou automatique","physique ou psychologique","interne ou externe"],a:0,e:"La capacité est physique ou psychologique ; la motivation réflexive ou automatique."}]},
+{id:"u3l2",title:"Définition et études de marché",q:[
+{t:"qcm",q:"La définition simple du marketing social :",o:["un processus de planification qui applique les techniques du marketing commercial à un changement de comportement volontaire et socialement bénéfique","une campagne de communication de santé publique","une méthode de vente de produits de santé","une technique de sondage d'opinion"],a:0,e:"Grier & Bryant 2005 ; ISMA 2013 ; Lee & Kotler 2019."},
+{t:"vf",q:"Une campagne de communication seule est, à proprement parler, du marketing social.",a:false,e:"Ce qui définit le marketing social, c'est l'intégration systématique de plusieurs éléments."},
+{t:"qcm",q:"Quels éléments doivent être intégrés pour parler de marketing social ?",o:["Théorie de l'échange, segmentation, analyse de la concurrence, 5C, orientation consommateur, suivi continu","Slogan, affiche, spot télé","Objectif, budget, calendrier","Diagnostic, action, bilan"],a:0,e:"Plus une recherche formative en amont."},
+{t:"qcm",q:"La recherche formative, c'est…",o:["la recherche menée en amont pour comprendre le public (besoins, perceptions, freins) et orienter la stratégie","l'évaluation finale du programme","la formation des professionnels","une revue de littérature"],a:0,e:"Spécificité du marketing social : recherche formative ET suivi continu."},
+{t:"qcm",q:"Quelles sont les trois questions des études de marché ?",o:["Quel public ? Comment perçoit-il le problème ? Que pense-t-il des actions envisagées ?","Combien ça coûte ? Qui paie ? Quand ?","Quel slogan ? Quel média ? Quelle fréquence ?","Quel risque ? Quelle maladie ? Quel traitement ?"],a:0,e:"On explore un problème avant d'agir, pas seulement sur une intuition."},
+{t:"qcm",q:"Les Baromètres de Santé publique France :",o:["depuis 1992, 3 000 à 30 000 personnes, participation autour de 50 %, sondage à deux degrés","depuis 2020, 500 personnes en ligne","une enquête annuelle en pharmacie","un recensement exhaustif"],a:0,e:"Coûteux ; les problèmes sont ciblés par périodes (le sida dans les années 1980)."},
+{t:"assoc",q:"Associe chaque limite méthodologique à son illustration.",p:[["Biais déclaratif","dire ce qui ne s'est pas passé"],["Représentativité","études faites uniquement sur des hommes"],["Chiffre isolé","un instant T"],["Lassitude","accumulation des messages"]],e:"L'infarctus du myocarde, longtemps étudié seulement chez les hommes."},
+{t:"qcm",q:"Que révèlent les entretiens que les chiffres ne disent pas ?",o:["Les motivations, les motivations au changement et les freins","Les prévalences","Les coûts","Les tendances nationales"],a:0,e:"Pourquoi une personne fume, ce que cela lui apporte ; grossesse, campus sans tabac ; peur de l'échec."}]},
+{id:"u3l3",title:"Cibler : SEM, ROI, objectifs",q:[
+{t:"qcm",q:"À quoi sert le modèle écologique social (SEM) ?",o:["Repérer, avant de segmenter, tous les facteurs qui contribuent à un comportement, à plusieurs niveaux","Calculer le retour sur investissement","Formuler des objectifs SMART","Évaluer l'efficacité"],a:0,e:"Bronfenbrenner, Dahlgren & Whitehead ; exemple de la réduction du sel."},
+{t:"qcm",q:"La matrice ROI en marketing social est…",o:["un outil de priorisation comparant impact potentiel et faisabilité","un calcul financier de rentabilité","une grille d'évaluation finale","une méthode de segmentation"],a:0,e:"Elle choisit le comportement à cibler parmi les candidats issus du SEM."},
+{t:"qcm",q:"Dans l'exemple de la Barbade, quel comportement a été retenu ?",o:["L'activité physique : impact et faisabilité les plus élevés","L'alimentation saine","Les attitudes des employeurs","Le sommeil"],a:0,e:"Attitudes des employeurs : impact et faisabilité faibles, écarté ; alimentation saine : faisable mais impact limité."},
+{t:"qcm",q:"Quels critères servent à segmenter ?",o:["Sociodémographiques, comportementaux, psychographiques, critères de santé","Uniquement l'âge et le sexe","Le revenu seulement","Le lieu de résidence seulement"],a:0,e:"L'intention de changer (stade transthéorique) est un critère psychographique."},
+{t:"vf",q:"Une segmentation mal conduite peut renforcer la stigmatisation d'un groupe.",a:true,e:"Point de vigilance central du cours."},
+{t:"qcm",q:"Lequel de ces objectifs est SMART ?",o:["Réduire de 20 % la prévalence du tabagisme quotidien chez les étudiants de l'EHESP entre 2024 et 2027","Sensibiliser les étudiants au tabac","Communiquer sur les dangers du tabac","Améliorer la santé des étudiants"],a:0,e:"Une population, un indicateur, un chiffre, une échéance."},
+{t:"qcm",q:"Quel est le problème de « Sensibiliser les étudiants au tabac » ?",o:["Il confond l'objectif avec une action, n'est pas mesurable et n'a pas d'échéance","Il est trop ambitieux","Il vise la mauvaise population","Il coûte trop cher"],a:0,e:"Réflexe : un objectif qui décrit une action est un moyen déguisé."},
+{t:"assoc",q:"Trois types d'objectifs (Kotler & Lee) : associe chaque type à son exemple Campus sans tabac.",p:[["Comportemental","solliciter une consultation d'arrêt"],["Connaissance","savoir que des aides existent"],["Croyance","croire qu'arrêter est possible"],["SMART","mesurable et daté"]],e:"Chaque objectif doit ensuite être rendu SMART."}]},
+{id:"u3l4",title:"Échange, 5C, évaluation",q:[
+{t:"qcm",q:"Quels sont les 5 prérequis à l'échange ?",o:["Deux parties, une valeur mutuelle, la capacité de communiquer cette valeur, la liberté d'accepter ou refuser, la perception d'un bénéfice","Un produit, un prix, une place, une promotion, un public","Un émetteur, un message, un canal, un récepteur, un feedback","Un besoin, une offre, un contrat, un paiement, un service"],a:0,e:"Houston & Gassenheimer (1987)."},
+{t:"qcm",q:"Quelle est la limite de l'échange propre à la santé publique ?",o:["Il est asymétrique : le bénéfice est différé quand le coût est immédiat","Il est illégal","Il est trop coûteux","Il n'existe pas"],a:0,e:"D'où l'importance de réduire le coût perçu et de rendre le bénéfice tangible."},
+{t:"assoc",q:"Associe chaque C du marketing mix à sa définition.",p:[["Comportement","ce que l'on propose"],["Coût","minimiser le coût perçu"],["Capacité d'accès","rendre le comportement accessible"],["Collaborateurs","acteurs de terrain, leaders d'opinion"]],e:"Le cinquième C : la campagne de communication, nécessaire mais non suffisante."},
+{t:"trou",q:"La ___ traverse les 5C : un ensemble de signes qui influence perception et comportement.",o:["marque","loi","taxe","cible"],a:0,e:"Campus sans tabac a déposé sa marque à l'INPI."},
+{t:"qcm",q:"L'évaluation de processus répond à la question :",o:["L'intervention a-t-elle été mise en œuvre comme prévu, avec quels freins et leviers ?","Quels changements sont attribuables à l'intervention ?","Combien a coûté l'intervention ?","Le public a-t-il aimé la campagne ?"],a:0,e:"L'évaluation d'efficacité mesure les changements attribuables (comportements, connaissances)."},
+{t:"vf",q:"L'essai contrôlé randomisé est toujours possible et adapté en santé publique.",a:false,e:"Il reste la référence, mais on complète par des enquêtes en population et des études coût-efficacité."},
+{t:"qcm",q:"La variable d'évaluation doit être…",o:["sensible et spécifique à la campagne évaluée","la plus générale possible","la mortalité toutes causes","choisie après l'intervention"],a:0,e:"Un indicateur trop général masque l'effet réel."},
+{t:"qcm",q:"Qu'a produit la campagne de prévention jeunesse d'un industriel du tabac ?",o:["Une intention accrue de fumer chez les 12-17 ans","Une baisse du tabagisme","Aucun effet","Une hausse des ventes de substituts"],a:0,e:"Quand l'émetteur a un intérêt commercial, l'effet peut s'inverser."}]}
+]},
+{id:"u4",n:4,c:"--u4",title:"Upstream et Campus sans tabac",who:"Diane Geindreau · module 4",lessons:[
+{id:"u4l1",title:"Campus sans tabac",q:[
+{t:"qcm",q:"Quelle part des étudiants fume quotidiennement (SPF 2023) ?",o:["17,2 %","30,6 %","8 %","45 %"],a:0,e:"30,6 % est la part de consommateurs mensuels dans la cohorte i-Share (n = 10 066)."},
+{t:"qcm",q:"Quelle part des fumeurs commence avant 26 ans ?",o:["98 %","50 %","75 %","30 %"],a:0,e:"D'où l'enjeu des campus : 2,97 millions d'étudiants en France."},
+{t:"trou",q:"Campus sans tabac s'inscrit dans le PNLT, axe ___, action 19.",o:["3","1","5","7"],a:0,e:"Programme national de lutte contre le tabac."},
+{t:"qcm",q:"Dans la revue de 113 articles, l'acceptabilité des politiques campus sans tabac va de…",o:["40 à 79 %","10 à 20 %","90 à 100 %","0 à 5 %"],a:0,e:"Avec une hausse du vapotage et de la vape dissimulée."},
+{t:"qcm",q:"Quel est le levier le plus cité dans la littérature ?",o:["Le soutien de la gouvernance","Les amendes","Les affiches","Les applications mobiles"],a:0,e:"Les objectifs sont formulés à trois échelles : établissement, personnels, étudiants."},
+{t:"qcm",q:"Enquête EHESP 2018-2025 : quelle part des fumeurs est favorable à la démarche ?",o:["91,5 %","96,7 %","50 %","25 %"],a:0,e:"96,7 % chez l'ensemble des 2 532 étudiants répondants."},
+{t:"vf",q:"La connaissance des dangers du tabac est fortement associée au soutien à la politique campus sans tabac.",a:false,e:"Elle n'y est pas associée : informer ne suffit pas."},
+{t:"qcm",q:"Quel effet indésirable est documenté après la mise en place d'un campus sans tabac ?",o:["Hausse du vapotage et vape dissimulée","Hausse du tabagisme quotidien","Baisse de la fréquentation","Augmentation des accidents"],a:0,e:"À anticiper dans le C « Comportement » : ne pas fumer ni vapoter."}]},
+{id:"u4l2",title:"Upstream et recherche",q:[
+{t:"qcm",q:"Qui cible le marketing social upstream ?",o:["Les leaders, décideurs, régulateurs et institutions","Les individus directement","Les enfants","Les consommateurs à risque"],a:0,e:"Objectif : faire adopter lois, normes et politiques qui changent l'environnement."},
+{t:"qcm",q:"La définition de Gordon (2013) :",o:["l'adaptation du marketing pour changer le comportement des décideurs et des faiseurs d'opinion, ce qui modifie l'environnement structurel","la vente de produits de santé aux entreprises","le marketing des hôpitaux","une campagne nationale de communication"],a:0,e:"European Journal of Marketing, 47(9)."},
+{t:"qcm",q:"Rose (1985) oppose…",o:["la stratégie « high-risk » (individus à risque) et la stratégie « population » (déterminants pour tous)","la prévention et le soin","la ville et la campagne","les hommes et les femmes"],a:0,e:"Deux disciplines, une même intuition que downstream / upstream."},
+{t:"qcm",q:"Qu'apporte le cadre de Kennedy, Kemper & Parsons (2018) ?",o:["Une approche systémique des normes institutionnelles et l'articulation upstream-downstream","Une méthode de calcul du ROI","Une échelle de contrainte","Un modèle de communication"],a:0,e:"Les mêmes outils (recherche formative, segmentation, marketing mix) s'appliquent aux décideurs."},
+{t:"qcm",q:"L'étude sur les doyens de médecine :",o:["33 entretiens entre octobre 2022 et janvier 2024, analysés avec NVivo 14","un questionnaire en ligne auprès de 2 532 étudiants","une revue de 113 articles","un essai contrôlé randomisé"],a:0,e:"35 doyens ciblés, 25 hommes et 8 femmes interrogés."},
+{t:"qcm",q:"Au sens du modèle transthéorique, la plupart des doyens sont en…",o:["précontemplation","action","maintien","rechute"],a:0,e:"D'où le besoin de leadership, d'incarnation et d'un porte-parole."},
+{t:"vf",q:"Agir en upstream dispense d'agir sur les individus.",a:false,e:"Agir sur l'environnement ne dispense pas d'agir sur les individus, et réciproquement."},
+{t:"qcm",q:"Qu'est-ce qui fait la solidité d'une étude selon le module 4 ?",o:["Un gap identifié, un cadrage théorique, une méthode adaptée à la question, des limites énoncées","Un grand échantillon uniquement","Une publication rapide","Un seul chercheur pour garantir la cohérence"],a:0,e:"Énoncer ses limites (31 facultés sur 35, un seul codeur) est un signe de rigueur."}]}
+]},
+{id:"u5",n:5,c:"--u5",title:"Stratégies éducatives",who:"Marick Fèvre · séquence 1",lessons:[
+{id:"u5l1",title:"Gordon et l'étude de cas",q:[
+{t:"assoc",q:"Classification de Gordon : associe chaque type de prévention à sa cible.",p:[["Universelle","toute la population"],["Sélective","un sous-groupe à risque accru"],["Ciblée","des personnes présentant déjà des signes"],["Primordiale","les conditions avant les facteurs de risque"]],e:"Universelle, sélective, ciblée (ou indiquée)."},
+{t:"qcm",q:"Étude de cas : quel budget et quelle durée ?",o:["500 000 € de l'ARS sur 3 ans","50 000 € sur 1 an","5 millions d'euros sur 10 ans","Pas de budget"],a:0,e:"Projet de promotion de la santé contre le surpoids et la sédentarité des adolescents d'une métropole."},
+{t:"qcm",q:"Quel est l'objectif de l'étude de cas ?",o:["Réduire de 20 % la prévalence du surpoids et de la sédentarité chez les adolescents de la métropole d'ici 3 ans","Sensibiliser les adolescents à la nutrition","Former tous les enseignants","Ouvrir une salle de sport"],a:0,e:"En instaurant des pratiques durables ; évaluation avant, annuelle et après."},
+{t:"assoc",q:"Axe alimentation : associe chaque intervention à son niveau.",p:[["Aval","séances gratuites avec une diététicienne"],["Intermédiaire","fruits de saison aux récréations"],["Amont","interdiction des publicités ultra-transformées"],["Amont économique","revenu de base pour les familles"]],e:"Aussi en intermédiaire : café des parents et formation des enseignants."},
+{t:"qcm",q:"Axe activité physique : quelle intervention est en amont ?",o:["Subventionner la pratique (licence, équipement, pass sport)","Adapter les activités sportives scolaires aux adolescents en surpoids","Former les enseignants","Organiser un café des parents"],a:0,e:"Adapter les activités = aval ; formation et café des parents = intermédiaire."},
+{t:"vf",q:"Le partiel de l'UE2 est une question portant sur deux matières de l'UE.",a:true,e:"Et une production individuelle écrite pour Diane Geindreau."},
+{t:"qcm",q:"« Les problèmes publics sont construits » implique de…",o:["toujours se demander qui a créé la stratégie et qui y a un intérêt","suivre les indicateurs de mortalité évitable","laisser les épidémiologistes décider","appliquer les recommandations sans discussion"],a:0,e:"Prostitution, surpoids… mais pas les lobbies de l'alcool."},
+{t:"qcm",q:"Quel piège signale Fèvre ?",o:["Se laisser piéger par les indicateurs de mortalité évitable : les épidémiologistes créent des problèmes repris par les économistes","Ignorer les statistiques","Trop écouter la population","Négliger les médecins"],a:0,e:"Les populations devraient s'exprimer sur leur santé, or c'est le corps médical qui répond."}]},
+{id:"u5l2",title:"Promotion de la santé et Ottawa",q:[
+{t:"qcm",q:"Pour Cambon, Alla & Chauvin, la promotion de la santé est…",o:["un processus politique et social qui renforce les aptitudes des individus et change la situation sociale, environnementale et économique","une méthode de communication","l'ensemble des soins primaires","la prévention secondaire"],a:0,e:"Elle est indissociable de la lutte contre les inégalités sociales de santé."},
+{t:"assoc",q:"Charte d'Ottawa : associe chaque axe à une stratégie.",p:[["Aptitudes individuelles","éducation thérapeutique"],["Implication de la collectivité","soutien par les pairs"],["Milieux favorables","urbanisme favorable à la santé"],["Réorienter les services","aller-vers"]],e:"Cinquième axe : interpeller les décideurs (plaidoyer)."},
+{t:"qcm",q:"Quelle serait la politique de santé publique la plus efficace selon le cours ?",o:["Un grand programme de lutte contre la pauvreté","Une campagne nationale d'information","Le doublement du nombre de médecins","L'interdiction du tabac"],a:0,e:"Et la lutte la plus efficace contre les inégalités sociales de santé."},
+{t:"vf",q:"La promotion de la santé est indissociable de la lutte contre les inégalités sociales de santé.",a:true,e:"Lien très fort avec l'empowerment et la justice sociale."},
+{t:"qcm",q:"Pourquoi dit-on éducation « pour » la santé et non « à » la santé ?",o:["« À la santé » traduit une vision descendante","C'est une simple question de grammaire","« Pour » est plus court","« À » est réservé aux enfants"],a:0,e:"Un programme part des savoirs du groupe, de ses freins et leviers."},
+{t:"qcm",q:"Quelles sont les quatre compétences de la littératie en santé ?",o:["Chercher, comprendre, critiquer, mettre en œuvre l'information","Lire, écrire, compter, parler","Écouter, obéir, appliquer, répéter","Prévenir, dépister, soigner, rééduquer"],a:0,e:"Serait la méthode la plus efficace, mais elle demande du temps."},
+{t:"qcm",q:"Les besoins de santé de la population sont…",o:["ceux exprimés par la population, non par les épidémiologistes en termes de facteurs de risque","ceux définis par l'ARS","ceux mesurés par la mortalité évitable","ceux des médecins"],a:0,e:"Exemples : le FALC sur les boîtes de médicaments ; les malades du sida qui avaient besoin de voir des gens."},
+{t:"trou",q:"« Les individus ne sont pas des ___ vides qu'il faut remplir d'informations. »",o:["cruches","boîtes","pages","salles"],a:0,e:"Critique d'un système qui croit qu'on se débarrasse d'un comportement défavorable par l'information."}]},
+{id:"u5l3",title:"Stratégies par axe",q:[
+{t:"qcm",q:"Quel exemple rennais de réduction des risques est cité ?",o:["Les Noz'ambules et leurs kits de prévention","Les pharmacies de garde","Le SAMU social","Les maisons de santé"],a:0,e:"Réduire les risques, pas les éliminer."},
+{t:"qcm",q:"L'éducation thérapeutique du patient s'est beaucoup développée avec…",o:["le diabète de type 2, puis l'asthme et les allergies","la grippe","les fractures","les urgences"],a:0,e:"Les individus ont sur leur santé des savoirs aussi essentiels que ceux des médecins."},
+{t:"assoc",q:"Associe chaque sigle à sa définition.",p:[["DAC","coordination des parcours"],["CPTS","offre de santé d'un territoire"],["EIS","impact d'un projet d'aménagement"],["FALC","facile à lire et à comprendre"]],e:"L'EIS s'applique aux projets d'aménagement et aux politiques locales."},
+{t:"qcm",q:"La médiation en santé est…",o:["un métier à part entière entre le système de santé et la personne","une pratique bénévole","une forme de publicité","un dispositif réservé aux hôpitaux"],a:0,e:"Sur l'axe « réorienter les services de santé »."},
+{t:"qcm",q:"Une méthode pédagogique doit être…",o:["pertinente, cohérente, interactive, fondée sur la participation active et le droit à l'erreur","descendante et magistrale","évaluée par une note","la plus longue possible"],a:0,e:"Aussi : non-jugement, valorisation, respect du rythme, simplicité."},
+{t:"vf",q:"Un atelier unique sur les classes d'aliments est un programme d'éducation pour la santé.",a:false,e:"C'est « éduquer à la santé » ; un programme est une série d'ateliers pédagogiques."},
+{t:"qcm",q:"L'accès à la nature comme stratégie de milieu favorable…",o:["se développe depuis 2017-2018 avec un effet sur la santé mentale","est abandonné depuis 2010","ne concerne que les enfants","n'a aucun effet documenté"],a:0,e:"Voir la nature a un effet bénéfique, notamment en santé mentale."},
+{t:"qcm",q:"Sur l'axe des politiques publiques, on trouve…",o:["le plaidoyer, la formation des responsables politiques, l'intégration des populations dans les instances","le dépistage","la rééducation","la vaccination"],a:0,e:"Et repérer les personnes déjà sensibilisées pour l'éducation par les pairs."}]}
+]},
+{id:"u6",n:6,c:"--u6",title:"Action publique et lobbying",who:"Fèvre · Geindreau & Aurouet",lessons:[
+{id:"u6l1",title:"Pouvoir et légitimité",q:[
+{t:"qcm",q:"Le pouvoir se loge dans…",o:["la maîtrise des zones d'incertitude","le statut hiérarchique","le budget","la loi"],a:0,e:"Chaque acteur a une marge de manœuvre où il peut mobiliser une stratégie."},
+{t:"qcm",q:"Quelles sont les quatre sources de pouvoir vues en cours ?",o:["Expertise, relations avec l'environnement, communication, règles","Argent, force, savoir, charisme","Élection, nomination, héritage, concours","Loi, décret, arrêté, circulaire"],a:0,e:"Le pouvoir n'est pas une propriété qu'on détient : il est construit."},
+{t:"vf",q:"Un intérêt partagé suffit à produire une action collective.",a:false,e:"Chacun peut être tenté de laisser les autres se mobiliser."},
+{t:"qcm",q:"Un groupe d'intérêt…",o:["ne se donne pas, il se construit, et a besoin d'un porte-parole","existe dès qu'un intérêt est partagé","est toujours majoritaire","est forcément une association de patients"],a:0,e:"Certains intérêts réels restent invisibles ; un acteur minoritaire peut avoir intérêt à se mobiliser."},
+{t:"assoc",q:"Associe chaque auteur ou notion à son idée.",p:[["Lascoumes & Le Galès","des instruments jamais neutres"],["Muller","le référentiel"],["Weber","trois légitimités"],["Agenda","le problème devient public"]],e:"Les statistiques sont des instruments : qui y a intérêt ?"},
+{t:"qcm",q:"Les trois légitimités de Max Weber :",o:["traditionnelle, charismatique, légale-rationnelle","politique, économique, sociale","locale, nationale, européenne","scientifique, médicale, populaire"],a:0,e:"À mobiliser pour interroger la légitimité d'un acteur ou d'une politique."},
+{t:"qcm",q:"Un problème social devient un problème public quand…",o:["il arrive sur l'agenda","il est mesuré par les épidémiologistes","il coûte cher","il touche plus de la moitié de la population"],a:0,e:"Il peut aussi en sortir : le VIH ou le Covid ont été à l'agenda et ne le sont plus."},
+{t:"vf",q:"Le pouvoir se confond avec le statut hiérarchique.",a:false,e:"Éviter cet amalgame : le pouvoir est construit dans les zones d'incertitude."}]},
+{id:"u6l2",title:"Déterminants commerciaux",q:[
+{t:"qcm",q:"Les déterminants commerciaux de la santé, c'est…",o:["l'impact sur la santé des biens produits par des acteurs économiques et de leurs stratégies d'influence","le prix des médicaments","la publicité des hôpitaux","le marketing des mutuelles"],a:0,e:"Avec la hausse des maladies chroniques comme enjeu."},
+{t:"qcm",q:"Quel travail de groupe a été réalisé en cours ?",o:["La fresque des déterminants commerciaux","Un débat sur la vaccination","Une enquête de terrain","Un jeu de rôle sur les ARS"],a:0,e:"Diane Geindreau et Philémon Aurouet."},
+{t:"vf",q:"Les grands acteurs économiques ont intérêt à ce que les comportements changent.",a:false,e:"Ils protègent leur marché et tentent de minimiser la prévention."},
+{t:"qcm",q:"Le « jeu d'influence » oppose…",o:["ceux qui font de la prévention et ceux qui protègent leur marché","les médecins et les infirmiers","l'État et les régions","les jeunes et les âgés"],a:0,e:"La perception du public et l'opinion face aux arguments comptent."},
+{t:"qcm",q:"La critique « downstream » de Wallack reproche au marketing social de…",o:["se concentrer sur les comportements individuels sans traiter les causes structurelles","coûter trop cher","ne pas utiliser les réseaux sociaux","cibler les décideurs"],a:0,e:"Lien avec la fiche marketing social et avec l'upstream."},
+{t:"qcm",q:"Que faut-il retenir de la séance sur le lobbying ?",o:["Une conscience globale du sujet, des acteurs, de la société et des conséquences sur les lois","La liste des lobbies enregistrés","Le budget publicitaire des industriels","Les slogans des campagnes"],a:0,e:"Voir comment les politiques et les acteurs interagissent."},
+{t:"trou",q:"Cause distale (Raude) : un environnement qui valorise la consommation de ___ est un déterminant commercial.",o:["tabac","fruits","eau","livres"],a:0,e:"Pont entre la psychosociologie de la prévention et les déterminants commerciaux."},
+{t:"qcm",q:"Que faire face aux déterminants commerciaux ?",o:["Documenter en santé publique et comprendre la place et le rôle du consommateur","Interdire toute publicité","Ignorer les industriels","Négocier des partenariats commerciaux"],a:0,e:"Faire des recherches et comprendre le rôle que le consommateur a à jouer."}]}
+]},
+{id:"u7",n:7,c:"--u7",title:"Se diriger vers l'amont",who:"CCNDS 2025",lessons:[
+{id:"u7l1",title:"La rivière",q:[
+{t:"qcm",q:"À qui est attribuée l'anecdote de la rivière ?",o:["Au sociologue médical Irving Zola (popularisée par McKinlay)","À Geoffrey Rose","À Philippe Meirieu","À Michel Crozier"],a:0,e:"Plutôt que de repêcher sans fin les personnes qui se noient, remonter à la source."},
+{t:"assoc",q:"Associe chaque niveau à son image.",p:[["Aval","tirer les personnes hors de l'eau"],["Intermédiaire","les aider à sortir avant que ça s'aggrave"],["Amont","les empêcher de tomber à l'eau"],["Dérive du mode de vie","glisser de l'amont vers l'aval"]],e:"Tableau 1 du guide du CCNDS."},
+{t:"qcm",q:"Lequel n'est PAS un attribut d'une approche en amont ?",o:["Une action centrée sur les services cliniques de première ligne","Un lien avec les environnements économiques, politiques, sociaux et physiques","Des solutions au-delà du choix individuel","Des effets mesurés sur les conditions structurelles"],a:0,e:"L'amont agit principalement en dehors des soins cliniques, et souvent hors du secteur de la santé."},
+{t:"qcm",q:"Les interventions en amont visent à…",o:["déconstruire les facteurs sociaux et économiques, remettre en question politiques et pratiques, transformer valeurs et normes","répondre aux besoins immédiats de santé","modifier les conditions de vie dans les milieux","traiter les maladies et les blessures"],a:0,e:"L'aval traite et répond aux besoins immédiats ; l'intermédiaire modifie les conditions de vie."},
+{t:"vf",q:"Une intervention universelle est forcément une intervention en amont.",a:false,e:"Une intervention universelle de changement de mode de vie reste centrée sur les comportements, donc en aval."},
+{t:"qcm",q:"Le raisonnement « mieux que rien »…",o:["justifie l'aval par les contraintes budgétaires, mais risque d'avantager les privilégiés et de creuser l'écart","est toujours valable","est la définition de l'amont","concerne uniquement la prévention tertiaire"],a:0,e:"Lindsay McLaren."},
+{t:"qcm",q:"« L'eau est en mouvement » signifie que…",o:["aucune stratégie n'est placée de façon permanente en amont ; tout dépend des interactions entre politiques","les rivières sont dangereuses","l'amont est toujours atteint","les politiques ne changent jamais"],a:0,e:"C'est l'entrecroisement des politiques qui détermine la portée de leurs effets."},
+{t:"qcm",q:"Pour des modes de vie sains, une intervention intermédiaire serait…",o:["l'accès à des aliments sains et à l'activité physique dans les milieux (école, quartier)","des conseils individuels","une politique de revenu minimum","un traitement médicamenteux"],a:0,e:"Conseils individuels = aval ; revenu = amont."}]},
+{id:"u7l2",title:"Remonter la rivière",q:[
+{t:"qcm",q:"La dérive du mode de vie (Popay et al., 2010), c'est…",o:["la tendance des politiques à reconnaître la nécessité d'agir en amont puis à dériver vers les facteurs individuels de mode de vie","le changement des habitudes alimentaires","la migration des populations","la baisse de l'activité physique"],a:0,e:"Plus facile et plus direct, mais peu d'effet sur la santé des populations et risque d'accroître les inégalités."},
+{t:"qcm",q:"Dans l'exemple des cinq « pourquoi » (personne en dépression), quelle est la cause profonde ?",o:["L'absence de congés de maladie payés","Le stress","La perte d'emploi","La maladie"],a:0,e:"Stress → perte d'emploi → impossibilité d'aller travailler → maladie → pas de congés payés : une cause structurelle."},
+{t:"qcm",q:"Quelles sont les trois formes de pouvoir citées ?",o:["Visible, caché, invisible","Politique, économique, médical","Local, régional, national","Légal, traditionnel, charismatique"],a:0,e:"« Les déséquilibres de pouvoir ne sont pas accidentels ou inévitables. »"},
+{t:"trou",q:"La ___ désigne le privilège associé à vos identités.",o:["positionnalité","résilience","littératie","segmentation"],a:0,e:"Réfléchir à son pouvoir et à sa positionnalité : réflexivité critique."},
+{t:"qcm",q:"L'enquête d'Engage Nova Scotia (2019) :",o:["huit domaines du bien-être, plus de 200 questions (confiance, solitude, discrimination, lien à la nature)","un recensement médical","une étude de mortalité","un sondage électoral"],a:0,e:"Mesurer autrement : qualité de vie, bien-être, capacités, relations."},
+{t:"qcm",q:"Quel langage recommande le CCNDS ?",o:["Un langage centré sur la personne, sur les systèmes et sur les actifs : « personnes marginalisées par l'oppression »","Un langage médical strict","Un langage neutre sans référence aux causes","Un langage centré sur les comportements à risque"],a:0,e:"Les mots reflètent nos croyances sur les racines de la santé."},
+{t:"vf",q:"La dérive du mode de vie a peu d'effet sur la santé des populations et peut accroître les inégalités.",a:true,e:"Elle affaiblit les efforts sur les conditions structurelles."},
+{t:"qcm",q:"La compétence essentielle de santé publique au Canada, c'est…",o:["mener des actions en amont tout en soutenant les actions en aval pour les besoins immédiats","choisir entre amont et aval","se limiter aux soins cliniques","déléguer l'amont aux élus"],a:0,e:"À développer : partenariats, leadership, plaidoyer, organisation communautaire, intersectorialité."}]}
+]}
+];
+
+/* ---------- État ---------- */
+const KEY="hygee.v1";
+let S=load();
+function load(){try{const r=localStorage.getItem(KEY);if(r){const o=JSON.parse(r);if(o&&typeof o==='object')return Object.assign({xp:0,streak:0,last:null,lessons:{}},o);}}catch(e){}return{xp:0,streak:0,last:null,lessons:{}};}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function today(){const d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();}
+function touchStreak(){const t=today();if(S.last===t)return;const y=new Date();y.setDate(y.getDate()-1);const ys=y.getFullYear()+"-"+(y.getMonth()+1)+"-"+y.getDate();S.streak=(S.last===ys)?S.streak+1:1;S.last=t;}
+function streakAlive(){if(!S.last)return false;const t=today();const y=new Date();y.setDate(y.getDate()-1);const ys=y.getFullYear()+"-"+(y.getMonth()+1)+"-"+y.getDate();return S.last===t||S.last===ys;}
+const app=document.getElementById('app');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const buzz=p=>{try{if(navigator.vibrate)navigator.vibrate(p);}catch(e){}};
+const ICON={
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>',
+  fire:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.6 2c.4 3.2 3.9 4.6 3.9 9.4 0 1.5-.4 2.7-1.1 3.6.2-2.6-1.3-4.3-2.6-5.2.2 2.2-1.9 3.4-1.9 5.9 0 1 .3 1.8.8 2.4C8.6 17.6 6 15.4 6 11.6 6 6.6 12 5.6 12.6 2z"/></svg>',
+  bolt:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  cup:'<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 6h16v3H8z" fill="currentColor"/><path d="M9 9h14v2c0 6-3 9-7 12-4-3-7-6-7-12V9z" fill="currentColor" opacity=".85"/><path d="M16 23v4M12 27h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 13c2 0 3 1 4 3s3 3 5 1" fill="none" stroke="var(--bg)" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  trophy:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3"/></svg>'
+};
+const allLessons=()=>UNITS.flatMap(u=>u.lessons.map(l=>({u,l})));
+
+/* ---------- Écran d'accueil ---------- */
+function home(){
+  const total=allLessons().length;const done=allLessons().filter(x=>S.lessons[x.l.id]&&S.lessons[x.l.id].done).length;
+  const next=allLessons().find(x=>!(S.lessons[x.l.id]&&S.lessons[x.l.id].done));
+  let h=`<div class="screen"><header class="hdr"><div class="logo">${ICON.cup.replace('viewBox','style="color:var(--brand)" viewBox')}Hygée</div><div class="stats"><div class="stat fire" title="Jours d'affilée">${ICON.fire}${streakAlive()?S.streak:0}</div><div class="stat xp" title="Points d'expérience">${ICON.bolt}${S.xp}</div></div></header>
+  <div class="home">
+  <section class="hero"><h1>UE2 · Prévention et promotion de la santé</h1><p>Sept unités tirées des cours de l'EHESP (Raude, Breton, Geindreau, Fèvre, CCNDS). Chaque leçon dure trois à cinq minutes et te fait gagner des points.</p>
+  <div class="prog"><i style="width:${total?Math.round(done/total*100):0}%"></i></div><div class="prog-l">${done} leçon${done>1?'s':''} sur ${total} terminée${done>1?'s':''}</div>
+  <div class="row" style="margin-top:12px">${next?`<button class="btn" data-start="${next.l.id}">${done?'Continuer':'Commencer'}</button>`:''}<button class="btn ghost" data-review="1">Révision mixte</button><a class="btn ghost" href="${FICHES_URL}">Fiches détaillées</a></div></section>`;
+  UNITS.forEach(u=>{
+    const ld=u.lessons.filter(l=>S.lessons[l.id]&&S.lessons[l.id].done).length;
+    const gold=u.lessons.filter(l=>S.lessons[l.id]&&S.lessons[l.id].best===100).length;
+    h+=`<section class="unit" style="--c:var(${u.c});--cd:var(${u.c}d)"><div class="unit-h"><div><div class="n">Unité ${u.n}</div><h2>${esc(u.title)}</h2><div class="who">${esc(u.who)}</div></div><div class="crown">${ICON.star}${gold}/${u.lessons.length}</div></div><div class="path">`;
+    u.lessons.forEach((l,i)=>{
+      const st=S.lessons[l.id];const isNext=next&&next.l.id===l.id;
+      const cls=st&&st.done?(st.best===100?'node gold':'node done'):(isNext?'node next':'node');
+      const inner=st&&st.done?(st.best===100?ICON.star:ICON.check):(i+1);
+      const sub=st&&st.done?`Meilleur score : ${st.best} %`:(isNext?'À faire maintenant':`${l.q.length} questions`);
+      h+=`<button class="${cls}" data-start="${l.id}"><span class="disc">${inner}</span><span><div class="t">${esc(l.title)}</div><div class="s">${sub}</div></span></button>`;
+    });
+    h+=`</div></section>`;
+  });
+  h+=`<p class="foot-note">Ta progression est enregistrée sur cet appareil. Les <a href="${FICHES_URL}">fiches détaillées</a> reprennent chaque unité avec les définitions, les tableaux et les références à citer.</p></div></div>`;
+  app.innerHTML=h;window.scrollTo(0,0);
+  app.querySelectorAll('[data-start]').forEach(b=>b.addEventListener('click',()=>{const x=allLessons().find(y=>y.l.id===b.dataset.start);startLesson(x.u,x.l,x.l.q,false);}));
+  app.querySelector('[data-review]').addEventListener('click',()=>{
+    const doneQ=allLessons().filter(x=>S.lessons[x.l.id]&&S.lessons[x.l.id].done).flatMap(x=>x.l.q.map(q=>Object.assign({},q,{_u:x.u})));
+    const pool=doneQ.length>=12?doneQ:allLessons().flatMap(x=>x.l.q.map(q=>Object.assign({},q,{_u:x.u})));
+    startLesson(null,{id:'review',title:'Révision mixte'},shuffle(pool).slice(0,12),true);
+  });
+}
+
+/* ---------- Moteur de leçon ---------- */
+let L=null;
+function startLesson(u,l,qs,isReview){
+  L={u,l,isReview,queue:qs.map((q,i)=>({q,i,retry:false})),total:qs.length,idx:0,firstTry:0,seen:new Set(),wrongOnce:new Set(),wrongList:[],cur:null,answer:null,checked:false};
+  nextQ();
+}
+function nextQ(){
+  if(!L.queue.length)return finish();
+  L.cur=L.queue.shift();L.answer=null;L.checked=false;renderQ();
+}
+function progressPct(){const solved=L.seen.size- L.queue.filter(x=>x.retry).length;return Math.max(0,Math.min(100,Math.round(((L.total-L.queue.length-(L.cur?1:0))/L.total)*100)));}
+function renderQ(){
+  const {q}=L.cur;const u=L.u||q._u||UNITS[0];const color=`var(${u.c})`;
+  const kindName={qcm:'Choisis la bonne réponse',vf:'Vrai ou faux ?',trou:'Complète la phrase',assoc:'Associe les paires',ordre:'Remets dans l\'ordre'}[q.t];
+  const done=L.total-L.queue.length-1;
+  let h=`<div class="screen" style="--c:${color}"><div class="lesson"><div class="lbar"><button class="x" data-quit aria-label="Quitter la leçon">${ICON.x.replace('<svg','<svg style="width:20px;height:20px"')}</button><div class="pb"><i style="width:${Math.round(done/L.total*100)}%"></i></div><div class="cnt">${done}/${L.total}</div></div>
+  <div class="kind">${L.isReview?esc(u.title)+' · ':''}${kindName}${L.cur.retry?' · à nouveau':''}</div>`;
+  if(q.t==='qcm'){
+    L.view={opts:shuffle(q.o.map((t,i)=>({t,i})))};
+    h+=`<div class="qtext">${esc(q.q)}</div><div class="opts">${L.view.opts.map((o,k)=>`<button class="opt" data-pick="${k}"><span class="k">${k+1}</span><span>${esc(o.t)}</span></button>`).join('')}</div>`;
+  }else if(q.t==='vf'){
+    h+=`<div class="qtext">${esc(q.q)}</div><div class="vf"><button class="opt" data-pick="1">Vrai</button><button class="opt" data-pick="0">Faux</button></div>`;
+  }else if(q.t==='trou'){
+    L.view={opts:shuffle(q.o.map((t,i)=>({t,i})))};
+    h+=`<div class="qtext" id="qt">${esc(q.q).replace('___','<span class="gap" id="gap">&nbsp;</span>')}</div><div class="bank">${L.view.opts.map((o,k)=>`<button class="chipb" data-pick="${k}">${esc(o.t)}</button>`).join('')}</div>`;
+  }else if(q.t==='assoc'){
+    const left=shuffle(q.p.map((p,i)=>({t:p[0],i})));const right=shuffle(q.p.map((p,i)=>({t:p[1],i})));
+    L.view={left,right,pickL:null,pickR:null,matched:new Set(),errors:0};
+    h+=`<div class="qtext">${esc(q.q)}</div><div class="assoc">${left.map((o,k)=>`<button class="opt" data-l="${k}">${esc(o.t)}</button><button class="opt" data-r="${k}">${esc(right[k].t)}</button>`).join('')}</div>`;
+  }else if(q.t==='ordre'){
+    L.view={items:shuffle(q.items.map((t,i)=>({t,i}))),slots:[]};
+    h+=`<div class="qtext">${esc(q.q)}</div><div class="slots" id="slots"></div><div class="bank" id="bank"></div>`;
+  }
+  h+=`</div><div class="fb" id="fb"><div class="fb-in"><button class="btn wide" id="check" disabled>Vérifier</button></div></div></div>`;
+  app.innerHTML=h;window.scrollTo(0,0);
+  app.querySelector('[data-quit]').addEventListener('click',quitPrompt);
+  const check=document.getElementById('check');
+  check.addEventListener('click',()=>{if(L.checked)nextQ();else doCheck();});
+  if(q.t==='qcm'||q.t==='vf'){
+    app.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{if(L.checked)return;app.querySelectorAll('[data-pick]').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');L.answer=+b.dataset.pick;check.disabled=false;}));
+  }else if(q.t==='trou'){
+    app.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{if(L.checked)return;app.querySelectorAll('[data-pick]').forEach(x=>x.classList.remove('used'));b.classList.add('used');L.answer=+b.dataset.pick;const g=document.getElementById('gap');g.textContent=L.view.opts[L.answer].t;g.classList.add('filled');check.disabled=false;}));
+  }else if(q.t==='assoc'){
+    const V=L.view;
+    const upd=()=>{app.querySelectorAll('[data-l]').forEach(b=>{const k=+b.dataset.l;b.classList.toggle('sel',V.pickL===k);b.classList.toggle('gone',V.matched.has('L'+k));b.disabled=V.matched.has('L'+k);});app.querySelectorAll('[data-r]').forEach(b=>{const k=+b.dataset.r;b.classList.toggle('sel',V.pickR===k);b.classList.toggle('gone',V.matched.has('R'+k));b.disabled=V.matched.has('R'+k);});};
+    const tryMatch=()=>{if(V.pickL===null||V.pickR===null)return;const lb=app.querySelector(`[data-l="${V.pickL}"]`),rb=app.querySelector(`[data-r="${V.pickR}"]`);
+      if(V.left[V.pickL].i===V.right[V.pickR].i){V.matched.add('L'+V.pickL);V.matched.add('R'+V.pickR);lb.classList.add('right');rb.classList.add('right');buzz(15);}
+      else{V.errors++;lb.classList.add('wrong','shake');rb.classList.add('wrong','shake');buzz([30,40,30]);setTimeout(()=>{lb.classList.remove('wrong','shake');rb.classList.remove('wrong','shake');},450);}
+      V.pickL=null;V.pickR=null;setTimeout(upd,V.matched.size===V.left.length*2?0:120);
+      if(V.matched.size===V.left.length*2){L.answer=V.errors;setTimeout(doCheck,250);}};
+    app.querySelectorAll('[data-l]').forEach(b=>b.addEventListener('click',()=>{if(L.checked)return;V.pickL=V.pickL===+b.dataset.l?null:+b.dataset.l;upd();tryMatch();}));
+    app.querySelectorAll('[data-r]').forEach(b=>b.addEventListener('click',()=>{if(L.checked)return;V.pickR=V.pickR===+b.dataset.r?null:+b.dataset.r;upd();tryMatch();}));
+  }else if(q.t==='ordre'){
+    const V=L.view;const slots=document.getElementById('slots'),bank=document.getElementById('bank');
+    const draw=()=>{slots.innerHTML=q.items.map((_,k)=>{const it=V.slots[k];return `<button class="slot ${it?'full':''}" data-s="${k}"><span class="i">${k+1}</span><span>${it?esc(it.t):''}</span></button>`;}).join('');
+      bank.innerHTML=V.items.map((it,k)=>`<button class="chipb ${V.slots.some(s=>s&&s.k===k)?'used':''}" data-b="${k}" ${V.slots.some(s=>s&&s.k===k)?'disabled':''}>${esc(it.t)}</button>`).join('');
+      slots.querySelectorAll('[data-s]').forEach(b=>b.addEventListener('click',()=>{if(L.checked)return;const k=+b.dataset.s;if(V.slots[k]){V.slots.splice(k,1);draw();}}));
+      bank.querySelectorAll('[data-b]').forEach(b=>b.addEventListener('click',()=>{if(L.checked)return;V.slots.push({t:V.items[+b.dataset.b].t,i:V.items[+b.dataset.b].i,k:+b.dataset.b});draw();}));
+      check.disabled=V.slots.length!==q.items.length;L.answer=V.slots.map(s=>s.i);};
+    draw();
+  }
+}
+function doCheck(){
+  const {q}=L.cur;let ok=false,shown='';
+  if(q.t==='qcm'){ok=L.view.opts[L.answer].i===q.a;shown=q.o[q.a];app.querySelectorAll('[data-pick]').forEach(b=>{const k=+b.dataset.pick;b.disabled=true;if(L.view.opts[k].i===q.a)b.classList.add('right');else if(k===L.answer)b.classList.add('wrong');});}
+  else if(q.t==='vf'){ok=(L.answer===1)===q.a;shown=q.a?'Vrai':'Faux';app.querySelectorAll('[data-pick]').forEach(b=>{const k=+b.dataset.pick;b.disabled=true;if((k===1)===q.a)b.classList.add('right');else if(k===L.answer)b.classList.add('wrong');});}
+  else if(q.t==='trou'){ok=L.view.opts[L.answer].i===q.a;shown=q.o[q.a];app.querySelectorAll('[data-pick]').forEach(b=>{const k=+b.dataset.pick;b.disabled=true;if(L.view.opts[k].i===q.a)b.classList.add('right');else if(k===L.answer)b.classList.add('wrong');});const g=document.getElementById('gap');if(g){g.textContent=q.o[q.a];g.style.color=ok?'var(--ok-ink)':'var(--bad-ink)';}}
+  else if(q.t==='assoc'){ok=L.answer===0;shown=L.answer===1?'une erreur d\'association':L.answer+' erreurs d\'association';}
+  else if(q.t==='ordre'){ok=L.answer.every((v,k)=>v===k);shown=q.items.join(' → ');app.querySelectorAll('[data-s]').forEach((b,k)=>{b.disabled=true;b.classList.add(L.answer[k]===k?'right':'wrong');});app.querySelectorAll('[data-b]').forEach(b=>b.disabled=true);}
+  L.checked=true;L.seen.add(L.cur.i);
+  if(ok){buzz(20);if(!L.cur.retry)L.firstTry++;}
+  else{buzz([40,60,40]);if(!L.cur.retry){L.wrongOnce.add(L.cur.i);L.wrongList.push(q);L.queue.push({q,i:L.cur.i,retry:true});}}
+  const fb=document.getElementById('fb');fb.classList.add(ok?'good':'badf');
+  const title=ok?['Exact !','Bien joué !','Parfait !','Oui !'][Math.floor(Math.random()*4)]:'Pas tout à fait';
+  const body=ok?(q.e?esc(q.e):''):`${q.t==='assoc'?'':'<span class="ans">Réponse : '+esc(shown)+'</span><br>'}${q.e?esc(q.e):''}`;
+  fb.querySelector('.fb-in').innerHTML=`<div class="msg"><div class="ic" style="color:${ok?'var(--ok)':'var(--bad)'}">${ok?ICON.check:ICON.x}</div><div><b>${title}</b><span>${body}</span></div></div><button class="btn wide ${ok?'ok':'bad'}" id="check">Continuer</button>`;
+  const btn=document.getElementById('check');btn.addEventListener('click',nextQ);btn.focus({preventScroll:true});
+  document.querySelector('.lbar .pb i').style.width=Math.round((L.total-L.queue.length)/L.total*100)+'%';
+  document.querySelector('.lbar .cnt').textContent=(L.total-L.queue.length)+'/'+L.total;
+}
+function quitPrompt(){
+  const m=document.createElement('div');m.className='modal';m.innerHTML=`<div class="box"><h3>Quitter la leçon ?</h3><p>La progression de cette leçon ne sera pas enregistrée.</p><button class="btn wide" id="stay">Continuer la leçon</button><button class="btn ghost wide" id="leave">Quitter</button></div>`;
+  document.body.appendChild(m);m.querySelector('#stay').addEventListener('click',()=>m.remove());m.querySelector('#leave').addEventListener('click',()=>{m.remove();L=null;home();});
+}
+function finish(){
+  const acc=Math.round(L.firstTry/L.total*100);const perfect=L.wrongOnce.size===0;
+  const xp=L.firstTry*10+(perfect?20:0)+(L.isReview?5:0);
+  S.xp+=xp;touchStreak();
+  if(!L.isReview){const prev=S.lessons[L.l.id]||{done:false,best:0};S.lessons[L.l.id]={done:true,best:Math.max(prev.best||0,acc)};}
+  save();
+  const color=L.u?`var(${L.u.c})`:'var(--brand)';
+  const title=perfect?'Sans faute !':acc>=75?'Leçon terminée !':'Terminé, on y retourne bientôt';
+  const sub=perfect?'Tu as répondu juste du premier coup à toutes les questions.':`${L.firstTry} bonne${L.firstTry>1?'s':''} réponse${L.firstTry>1?'s':''} du premier coup sur ${L.total}. Les questions manquées te sont revenues en fin de leçon.`;
+  let h=`<div class="screen"><div class="result" style="--c:${color}"><div class="medal" style="border-color:${perfect?'var(--gold)':color};background:${perfect?'var(--gold-soft)':'var(--surface-2)'};color:${perfect?'var(--gold)':color}">${perfect?ICON.star:ICON.trophy}</div><h1>${title}</h1><p>${sub}</p>
+  <div class="tiles"><div class="tile" style="--c:var(--gold-dark)"><div class="l">XP gagnés</div><div class="v">+${xp}</div></div><div class="tile" style="--c:${color}"><div class="l">Précision</div><div class="v">${acc} %</div></div><div class="tile" style="--c:#E0632B"><div class="l">Série</div><div class="v">${S.streak} j</div></div></div>`;
+  if(L.wrongList.length){h+=`<div class="review-list"><b>À revoir dans les fiches :</b><ul>${L.wrongList.slice(0,5).map(q=>`<li>${esc(q.q.replace('___','…'))}</li>`).join('')}</ul></div>`;}
+  h+=`<div class="acts">${!perfect?`<button class="btn" id="again">Refaire la leçon</button>`:''}<button class="btn ${perfect?'':'ghost'}" id="back">Continuer</button><a class="btn ghost" href="${FICHES_URL}">Ouvrir les fiches</a></div></div></div>`;
+  app.innerHTML=h;window.scrollTo(0,0);
+  const again=document.getElementById('again');if(again)again.addEventListener('click',()=>{const u=L.u,l=L.l,r=L.isReview;const qs=r?shuffle(allLessons().flatMap(x=>x.l.q.map(q=>Object.assign({},q,{_u:x.u})))).slice(0,12):l.q;startLesson(u,l,qs,r);});
+  document.getElementById('back').addEventListener('click',()=>{L=null;home();});
+}
+home();
+</script>
+
+</body>
+</html>
